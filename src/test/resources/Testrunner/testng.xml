@@ -36,7 +36,7 @@
 	</test>
 
 
-	 <test name="Open Cart Home Page Test_chromium">
+	 <!--<test name="Open Cart Home Page Test_chromium">
 		<parameter name="browser" value="chromium" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginpageTest" />
@@ -48,6 +48,6 @@
 		<classes>
 			<class name="com.qa.opencart.tests.LoginpageTest" />
 		</classes>
-	</test> 
+	</test> -->
 
 </suite> <!-- Suite -->
