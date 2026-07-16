@@ -43,11 +43,7 @@
     </dependency>
 
 
-  	<dependency>
-  		<groupId>com.framework</groupId>
-  		<artifactId>playwright-complete-framework</artifactId>
-  		<version>1.0.0</version>
-  	</dependency>
+  	
   	
   	<dependency>
     <groupId>com.aventstack</groupId>
