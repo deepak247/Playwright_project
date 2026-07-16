@@ -4,6 +4,7 @@ import java.awt.print.Pageable;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Base64;
 import java.util.Properties;
 
 import com.microsoft.playwright.Browser;
@@ -98,14 +99,21 @@ public class playwrightFactory {
 		
 	}
 	
+//	public static String takescreenshot() {
+//		String path =System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis()+ ".png";
+//		
+//		getPage().screenshot(new Page.ScreenshotOptions()
+//				.setPath(Paths.get(path))
+//				.setFullPage(true));
+//		return path;
+//		
+//	}
+	
 	public static String takescreenshot() {
-		String path =System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis()+ ".png";
-		
-		getPage().screenshot(new Page.ScreenshotOptions()
-				.setPath(Paths.get(path))
-				.setFullPage(true));
-		return path;
-		
+	    byte[] screenshotBytes = getPage().screenshot(
+	        new Page.ScreenshotOptions().setFullPage(true)
+	    );
+	    return Base64.getEncoder().encodeToString(screenshotBytes);
 	}
 
 }
